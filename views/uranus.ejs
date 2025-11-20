@@ -5,13 +5,13 @@
     <h1>The Solar System</h1>
      <%- include('partials/nav.ejs') %>
     <h2>Planet Uranus</h2>
-    <%=   planetUranus.description  %>
-    <%=   planetUranus.distanceFromSun  %>
-    <%=   planetUranus.yearLength  %>
-    <%=   planetUranus.radius  %>
-    <%=   planetUranus.websiteLink  %>
-    <%=   planetUranus.oneEarthDay  %>
-    <%=   planetUranus.moons  %>
+    Description: <%=   planetUranus.description  %> <br><br>
+    Distance From Sun: <%=   planetUranus.distanceFromSun  %> <br><br>
+    One Earth Day: <%=   planetUranus.oneEarthDay  %> <br><br>
+    Year Length: <%=   planetUranus.yearLength  %> <br><br>
+    Radius: <%=   planetUranus.radius  %> <br><br>
+    Moons: <%=   planetUranus.moons  %> <br><br>
+    Link to planet website: <%=   planetUranus.websiteLink  %> <br><br>
     <img src="<%= planetUranus.image %>">
 
     <%- include('partials/footer.ejs') %>
