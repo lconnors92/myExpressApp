@@ -55,7 +55,7 @@ app.get('/jupiter', (req, res) => {
 
 app.get('/saturn', (req, res) => {
  let planetSaturn = planets.getSaturn();
- console.log(planetEarth);
+ console.log(planetSaturn);
  res.render('saturn', {planetSaturn});
 });
 
