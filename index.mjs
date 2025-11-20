@@ -31,6 +31,7 @@ app.get('/earth', (req, res) => {
 
 app.get('/mars', (req, res) => {
  let planetMars = planets.getMars();
+ planetMars.image = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/960px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png"
  console.log(planetMars);
  res.render('mars', {planetMars});
 });
