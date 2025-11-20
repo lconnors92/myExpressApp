@@ -62,7 +62,7 @@ app.get('/saturn', (req, res) => {
 app.get('/uranus', (req, res) => {
  let planetUranus = planets.getUranus();
  console.log(planetUranus);
- res.render('saturn', {planetUranus});
+ res.render('uranus', {planetUranus});
 });
 
 app.get('/neptune', (req, res) => {
