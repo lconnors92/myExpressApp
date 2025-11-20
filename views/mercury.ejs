@@ -5,8 +5,14 @@
     <h1>The Solar System</h1>
      <%- include('partials/nav.ejs') %>
     <h2>Planet Mercury</h2>
-    <%=   planetMercury.description  %>
-        <img src="<%= planetMercury.image %>">
+    Description: <%=   planetMercury.description  %> <br><br>
+    Distance From Sun: <%=   planetMercury.distanceFromSun  %> <br><br>
+    One Earth Day: <%=   planetMercury.oneEarthDay  %> <br><br>
+    Year Length: <%=   planetMercury.yearLength  %> <br><br>
+    Radius: <%=   planetMercury.radius  %> <br><br>
+    Moons: <%=   planetMercury.moons  %> <br><br>
+    Link to planet website: <%=   planetMercury.websiteLink  %> <br><br>
+    <img src="<%= planetMercury.image %>">
 
     <%- include('partials/footer.ejs') %>
 

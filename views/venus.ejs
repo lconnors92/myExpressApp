@@ -5,8 +5,14 @@
     <h1>The Solar System</h1>
      <%- include('partials/nav.ejs') %>
     <h2>Planet Venus</h2>
-    <%=   planetVenus.description  %>
-        <img src="<%= planetVenus.image %>">
+    Description: <%=   planetVenus.description  %> <br><br>
+    Distance From Sun: <%=   planetVenus.distanceFromSun  %> <br><br>
+    One Earth Day: <%=   planetVenus.oneEarthDay  %> <br><br>
+    Year Length: <%=   planetVenus.yearLength  %> <br><br>
+    Radius: <%=   planetVenus.radius  %> <br><br>
+    Moons: <%=   planetVenus.moons  %> <br><br>
+    Link to planet website: <%=   planetVenus.websiteLink  %> <br><br>
+    <img src="<%= planetVenus.image %>">
 
     <%- include('partials/footer.ejs') %>
 

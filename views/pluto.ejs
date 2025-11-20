@@ -5,8 +5,14 @@
     <h1>The Solar System</h1>
      <%- include('partials/nav.ejs') %>
     <h2>Planet Pluto</h2>
-    <%=   planetPluto.description  %>
-        <img src="<%= planetPluto.image %>">
+    Description: <%=   planetPluto.description  %> <br><br>
+    Distance From Sun: <%=   planetPluto.distanceFromSun  %> <br><br>
+    One Earth Day: <%=   planetPluto.oneEarthDay  %> <br><br>
+    Year Length: <%=   planetPluto.yearLength  %> <br><br>
+    Radius: <%=   planetPluto.radius  %> <br><br>
+    Moons: <%=   planetPluto.moons  %> <br><br>
+    Link to planet website: <%=   planetPluto.websiteLink  %> <br><br>
+    <img src="<%= planetPluto.image %>">
 
     <%- include('partials/footer.ejs') %>
 

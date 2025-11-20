@@ -5,8 +5,14 @@
     <h1>The Solar System</h1>
      <%- include('partials/nav.ejs') %>
     <h2>Planet Jupiter</h2>
-    <%=   planetJupiter.description  %>
-        <img src="<%= planetJupiter.image %>">
+    Description: <%=   planetJupiter.description  %> <br><br>
+    Distance From Sun: <%=   planetJupiter.distanceFromSun  %> <br><br>
+    One Earth Day: <%=   planetJupiter.oneEarthDay  %> <br><br>
+    Year Length: <%=   planetJupiter.yearLength  %> <br><br>
+    Radius: <%=   planetJupiter.radius  %> <br><br>
+    Moons: <%=   planetJupiter.moons  %> <br><br>
+    Link to planet website: <%=   planetJupiter.websiteLink  %> <br><br>
+    <img src="<%= planetJupiter.image %>">
 
     <%- include('partials/footer.ejs') %>
 

@@ -5,9 +5,15 @@
     <h1>The Solar System</h1>
      <%- include('partials/nav.ejs') %>
     <h2>Planet Earth</h2>
-    <%=   planetEarth.description  %>
-        <img src="<%= planetEarth.image %>">
-
+    Description: <%=   planetEarth.description  %> <br><br>
+    Distance From Sun: <%=   planetEarth.distanceFromSun  %> <br><br>
+    One Earth Day: <%=   planetEarth.oneEarthDay  %> <br><br>
+    Year Length: <%=   planetEarth.yearLength  %> <br><br>
+    Radius: <%=   planetEarth.radius  %> <br><br>
+    Moons: <%=   planetEarth.moons  %> <br><br>
+    Link to planet website: <%=   planetEarth.websiteLink  %> <br><br>
+    <img src="<%= planetEarth.image %>">
+    
     <%- include('partials/footer.ejs') %>
 
 </body>
