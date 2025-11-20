@@ -42,13 +42,14 @@ app.get('/earth', (req, res) => {
 
 app.get('/mars', (req, res) => {
  let planetMars = planets.getMars();
- planetMars.image = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/960px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png"
+ planetMars.image = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/960px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png";
  console.log(planetMars);
  res.render('mars', {planetMars});
 });
 
 app.get('/jupiter', (req, res) => {
  let planetJupiter = planets.getJupiter();
+ planetJupiter.image = "https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter_OPAL_2024.png";
  console.log(planetJupiter);
  res.render('jupiter', {planetJupiter});
 });
@@ -73,6 +74,7 @@ app.get('/neptune', (req, res) => {
 
 app.get('/pluto', (req, res) => {
  let planetPluto = planets.getPluto();
+ planetPluto.image = "https://upload.wikimedia.org/wikipedia/commons/e/ef/Pluto_in_True_Color_-_High-Res.jpg";
  console.log(planetPluto);
  res.render('pluto', {planetPluto});
 });
