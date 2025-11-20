@@ -8,7 +8,7 @@ body {
     font-weight: 300;
     font-style: normal;
     font-size: 16px;
-
+    max-width: 800px;
 }
 
 footer {
@@ -25,10 +25,14 @@ h1 {
 }
 
 .planet-img {
-    width: 600px;
+    width: 600px; 
+}
+
+.solar-system-img {
+    width: 1200px;
     border: white;
     border-width: 10px;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 nav {
