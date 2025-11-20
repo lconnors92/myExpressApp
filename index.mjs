@@ -24,9 +24,9 @@ app.get('/nasa', async(req, res) => {
 	let url = `https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=2024-11-14`;
     let response = await fetch(url);
     let data = await response.json();
-    let photoOfDay = data.urls.full;
+    
     //could also write the below line as res.render("index",{randomImage})
-    res.render("nasa",{apod:photoOfDay})
+    res.render("nasa",{apod:data})
 });
 
 
