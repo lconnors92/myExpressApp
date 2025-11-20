@@ -10,3 +10,23 @@ body {
     font-size: 16px;
 
 }
+
+footer {
+    font-size: 10px;
+    color: #efff09e7
+}
+
+h1 {
+  font-family: "Sirin Stencil", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+  letter-spacing: 5px;
+}
+
+.img {
+    width: 600px;
+    border: white;
+    border-width: 10px;
+    border-radius: 10px; 
+}
