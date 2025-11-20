@@ -21,7 +21,10 @@ app.get('/', async(req, res) => {
 //adding nasa photo of the day to nasa route
 app.get('/nasa', async(req, res) => {
     let apiKey = "9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD";
-	let url = `https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=2024-11-14`;
+    //Date -> toISOString, cut off Time (past T) for URL;
+    let date = new Date().toISOString().split("T")[0];
+    console.log(date);
+	let url = `https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=${date}`;
     let response = await fetch(url);
     let data = await response.json();
     
