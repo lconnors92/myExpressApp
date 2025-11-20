@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+<body>
+    <h1>The Solar System</h1>
+     <%- include('partials/nav.ejs') %>
+    <h2> NASA Photo of the Day </h2>
+    <%=   planetJupiter.description  %>
+        <img src="<%= apod.url %>">
+
+    <%- include('partials/footer.ejs') %>
+
+</body>
+</html>
