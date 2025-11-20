@@ -22,6 +22,17 @@ app.get('/', async(req, res) => {
 // app.get('/earth', (req, res) => {
 //  res.render('earth')
 // });
+app.get('/mercury', (req, res) => {
+ let planetMercury = planets.getMercury();
+ console.log(planetMercury);
+ res.render('mercury', {planetMercury});
+});
+
+app.get('/venus', (req, res) => {
+ let planetVenus = planets.getVenus();
+ console.log(planetVenus);
+ res.render('venus', {planetVenus});
+});
 
 app.get('/earth', (req, res) => {
  let planetEarth = planets.getEarth();
@@ -36,6 +47,35 @@ app.get('/mars', (req, res) => {
  res.render('mars', {planetMars});
 });
 
+app.get('/jupiter', (req, res) => {
+ let planetJupiter = planets.getJupiter();
+ console.log(planetJupiter);
+ res.render('jupiter', {planetJupiter});
+});
+
+app.get('/saturn', (req, res) => {
+ let planetSaturn = planets.getSaturn();
+ console.log(planetEarth);
+ res.render('saturn', {planetSaturn});
+});
+
+app.get('/uranus', (req, res) => {
+ let planetUranus = planets.getUranus();
+ console.log(planetUranus);
+ res.render('saturn', {planetUranus});
+});
+
+app.get('/neptune', (req, res) => {
+ let planetNeptune = planets.getNeptune();
+ console.log(planetNeptune);
+ res.render('neptune', {planetNeptune});
+});
+
+app.get('/pluto', (req, res) => {
+ let planetPluto = planets.getPluto();
+ console.log(planetPluto);
+ res.render('pluto', {planetPluto});
+});
 
 
 
