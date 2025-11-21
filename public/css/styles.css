@@ -25,6 +25,12 @@ h1 {
   letter-spacing: 5px;
 }
 
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .planet-img {
     width: 600px; 
 }
