@@ -23,42 +23,19 @@ app.get('/', async(req, res) => {
 //horrible test implementation
 app.get('/nasa', async (req, res) => {
     let apiKey = "9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD";
-
-    function getPST() {
-        let now = new Date();
-        let utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-        let pstOffset = -8; //PST = UTC - 8 
-        let pst = new Date(utc + (pstOffset * 3600000));
-        return pst.toISOString().split("T")[0];
-    }
-
-    const date = getPST();
+    let now = new Date();
+    let utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    let pstOffset = -8; //PST = UTC - 8 
+    let pst = new Date(utc + (pstOffset * 3600000));
+    let date = pst.toISOString().split("T")[0];;
     console.log("APOD date used (PST):", date);
 
-    const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
-    const response = await fetch(url);
-    const data = await response.json();
+    let url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
+    let response = await fetch(url);
+    let data = await response.json();
 
     res.render("nasa", { apod: data });
 });
-
-
-
-//adding nasa photo of the day to nasa route
-// app.get('/nasa', async(req, res) => {
-//     let apiKey = "9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD";
-//     //Date -> toISOString, YYYY-MM-DDTHH:mm:ss cut off Time (past T) for URL;
-//     let date = new Date().toISOString().split("T")[0];
-//     console.log(date);
-// 	let url = `https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=${date}`;
-//     let response = await fetch(url);
-//     let data = await response.json();
-//     //going to test date fix 
-//     console.log(data);
-//     //could also write the below line as res.render("index",{randomImage})
-//     res.render("nasa",{apod:data})
-// });
-
 
 
 // app.get('/earth', (req, res) => {
