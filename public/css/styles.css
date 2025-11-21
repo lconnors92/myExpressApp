@@ -36,9 +36,7 @@ h1 {
 
 .solar-system-img {
     width: 1200px;
-    border: white;
-    border-width: 10px;
-    border-radius: 10px;
+    margin: 0 auto;
 }
 
 nav a {
