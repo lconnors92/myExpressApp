@@ -36,7 +36,10 @@ h1 {
 
 
 .solar-system-img {
-    width: 1000px;
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
 }
 
 nav a {
