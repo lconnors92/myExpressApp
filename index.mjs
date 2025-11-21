@@ -9,8 +9,10 @@ app.use(express.static("public"));
 
 //root route
 app.get('/', async(req, res) => {
-    let apiKey = "7756a1e81f817c186cf57294e1c19b37b49c54b8f34e7c499ee0ce5cd86cd16e";
-	let url = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&featured=true&query=solar-system`;
+    //hit the limit had to create an app and get the key
+    let apiKey = "kS0Bxix9jy_K4_WSu7fWSSgsMHGwvDv7yAvNMCn8mxM";
+    let url = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&featured=true&query=solar-system`;
+
     let response = await fetch(url);
     let data = await response.json();
     let randomImage = data.urls.full;
@@ -27,6 +29,7 @@ app.get('/nasa', async(req, res) => {
 	let url = `https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=${date}`;
     let response = await fetch(url);
     let data = await response.json();
+    //going to test date fix 
     console.log(data);
     //could also write the below line as res.render("index",{randomImage})
     res.render("nasa",{apod:data})

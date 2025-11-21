@@ -7,7 +7,12 @@
      <%- include('partials/nav.ejs') %>
     <h2> NASA Photo of the Day </h2>
     
-    <img src="<%= apod.url %>" class="planet-img">
+    <!-- <img src="<%= apod.url %>" class="planet-img"> -->
+     <% if (apod && apod.url) { %>
+  <img src="<%= apod.url %>" class="planet-img" alt="<%= apod.title || 'NASA Astronomy Picture of the Day' %>">
+<% } else { %>
+  <p>NASA's APOD is not available right now. Please try again later.</p>
+<% } %>
     <br><br><br><br>
 
     <%- include('partials/footer.ejs') %>
