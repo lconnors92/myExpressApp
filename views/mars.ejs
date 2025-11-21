@@ -2,7 +2,8 @@
 <html>
 <%- include('partials/head.ejs') %>
 <body>
-    <h1>The Solar System</h1>
+    <div class="main">
+        <h1>The Solar System</h1>
      <%- include('partials/nav.ejs') %>
     <h2>Planet Mars</h2>
     <strong>Description: </strong><%=   planetMars.description  %> <br><br>
@@ -14,5 +15,7 @@
     <strong>Link to planet website: </strong><%=   planetMars.websiteLink  %> <br><br>
     <img src="<%= planetMars.image %>" class="planet-img"><br><br><br><br>
     <%- include('partials/footer.ejs') %>
+    </div>
+
 </body>
 </html>
