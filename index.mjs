@@ -20,7 +20,7 @@ app.get('/', async(req, res) => {
     res.render("index",{"image":randomImage})
 });
 
-//horrible test implementation
+//horrible test implementation somewhat worked through now I hate it
 app.get('/nasa', async (req, res) => {
     let apiKey = "9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD";
     let now = new Date();
